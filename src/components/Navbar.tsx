@@ -9,7 +9,7 @@ export const Navbar = () => {
     setActivePage(page);
   };
   return (
-    <div className="w-min h-screen bg-[#1B2028] text-[#9E9E9E] p-3 flex flex-col items-center justify-between">
+    <div className="w-min h-screen bg-base-black text-base-gray p-3 flex flex-col items-center justify-between">
       <div>
         <ul className="flex flex-col gap-0.5">
           <li>

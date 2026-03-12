@@ -21,7 +21,7 @@ const Button = ({
   return (
     <button
       onClick={handleClick}
-      className={`${isActive && "bg-[#3A6FF8] text-white"} flex items-center gap-2.5 px-3.5 py-2.5 border-none w-full rounded-[10px] hover:bg-[#3A6FF8] hover:text-white transition duration-100`}
+      className={`${isActive && "bg-[#3A6FF8] text-white"} flex items-center gap-2.5 px-3.5 py-2.5 border-none w-full rounded-[10px] hover:bg-base-blue hover:text-white transition duration-100`}
     >
       {children}
     </button>
