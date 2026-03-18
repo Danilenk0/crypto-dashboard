@@ -3,7 +3,7 @@ import creditCardChip from "../assets/creditCardChip.png";
 
 const CreditCard = () => {
   return (
-    <div className="relative w-95 h-55 rounded-2xl overflow-hidden bg-base-blue text-white p-6">
+    <div className="relative w-full h-50 rounded-2xl overflow-hidden bg-base-blue text-white p-6">
       <img
         className="absolute inset-0 w-full h-full object-cover"
         src={CreditCardBg}
