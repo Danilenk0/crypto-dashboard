@@ -1,6 +1,7 @@
 import { Navbar } from "./components/Navbar.tsx";
 import Header from "./components/Header.tsx";
 import Card from "./components/Card.tsx";
+import CreditCard from "./components/CreditCard.tsx";
 import type { ICard } from "./types/PageType.ts";
 import {
   BitcoinIcon,
@@ -59,9 +60,9 @@ function App() {
   return (
     <div className="w-full h-screen bg-page-bg flex">
       <Navbar />
-      <div className="flex-1">
+      <div className="flex-1 p-4">
         <Header />
-        <div className="flex justify-around mt-7">
+        <div className="flex justify-between mt-7">
           {cardData.map((item) => (
             <Card
               key={item.id}
@@ -74,6 +75,13 @@ function App() {
               color={item.color}
             />
           ))}
+        </div>
+        <div className="mt-8 flex w-full">
+          <div className="w-1/4 p-3.5">
+            <CreditCard />
+          </div>
+
+          <div className="w-3/4"></div>
         </div>
       </div>
     </div>
