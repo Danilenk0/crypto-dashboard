@@ -3,6 +3,7 @@ import Header from "./components/Header.tsx";
 import Card from "./components/Card.tsx";
 import CreditCard from "./components/CreditCard.tsx";
 import type { ICard } from "./types/PageType.ts";
+import { useState } from "react";
 import {
   BitcoinIcon,
   LitecoinIcon,
@@ -31,7 +32,9 @@ function App() {
       shortName: "ITC",
       price: 8.291,
       priceChanges: 0.25,
-      chartData: [52200, 52400, 5200, 52300, 52500, 52450, 52320, 52500, 52400],
+      chartData: [
+        52200, 52250, 52100, 52300, 52280, 52450, 52320, 52500, 52400,
+      ],
       color: "#627eea",
     },
     {
@@ -41,7 +44,9 @@ function App() {
       shortName: "ETH",
       price: 28.291,
       priceChanges: 0.25,
-      chartData: [28000, 28100, 28300, 28200, 28291, 27960, 2800, 28200, 28291],
+      chartData: [
+        52200, 52250, 52100, 52300, 52280, 52450, 52320, 52500, 52400,
+      ],
       color: "#627eea",
     },
     {
@@ -52,15 +57,18 @@ function App() {
       price: 14.291,
       priceChanges: -0.25,
       chartData: [
-        28000, 27900, 29300, 27600, 28291, 27960, 28000, 28200, 28291,
+        52400, 52500, 52320, 52450, 52280, 52300, 52100, 52250, 52200,
       ],
       color: "#627eea",
     },
   ];
+  const [isFullSize, setIsFullSize] = useState(true);
   return (
-    <div className="w-full h-screen bg-page-bg flex">
-      <Navbar />
-      <div className="flex-1 p-4">
+    <div className="w-full h-min bg-page-bg flex">
+      <Navbar isFullSize={isFullSize} setIsFullSize={setIsFullSize} />
+      <div
+        className={`${isFullSize ? "ml-50" : "ml-20"} flex-1 p-4 transition-all duration-300`}
+      >
         <Header />
         <div className="flex justify-between mt-7">
           {cardData.map((item) => (
